@@ -1,0 +1,129 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body { background-color: #0b0b0b; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+/* NAVBAR Y LOGO GIGANTE */
+.navbar { 
+    padding: 50px 20px; 
+    background: #000; 
+    text-align: center; 
+    border-bottom: 2px solid #d4af37;
+}
+.logo-wrapper {
+    max-width: 400px; /* Tamaño máximo del logo en pantalla */
+    margin: 0 auto;
+}
+.logo { 
+    width: 100%; 
+    height: auto; 
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.3));
+}
+
+/* BANNER */
+.main-banner {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('box.jpg');
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+}
+
+.streetwear-phrase { color: #888; font-size: 0.9rem; font-style: italic; margin-bottom: 10px; letter-spacing: 1px; }
+.banner-content h1 { font-size: clamp(3rem, 10vw, 6rem); color: #d4af37; font-weight: 900; }
+.promo-timer { background: rgba(212, 175, 55, 0.1); border: 1px solid #d4af37; padding: 15px; margin: 25px auto; border-radius: 5px; }
+#countdown { color: #d4af37; font-weight: bold; font-size: 1.5rem; display: block; }
+
+.btn-main { display: inline-block; padding: 18px 45px; background: #d4af37; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+.btn-main:hover { background: white; transform: scale(1.05); }
+
+/* CATALOGO GRID */
+.catalog { padding: 80px 20px; max-width: 1300px; margin: auto; }
+.grid-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* CARDS */
+.product-card { background: #111; border: 1px solid #222; border-radius: 12px; overflow: hidden; position: relative; transition: 0.4s; }
+.product-card:hover { border-color: #d4af37; transform: translateY(-10px); }
+
+.badge-gold { position: absolute; top: 15px; left: 15px; background: #d4af37; color: #000; padding: 6px 12px; font-weight: bold; font-size: 11px; border-radius: 4px; animation: pulse 2s infinite; }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+.product-img img { width: 100%; height: 300px; object-fit: cover; }
+.product-info { padding: 30px; text-align: center; }
+.price-container { margin: 15px 0; }
+.old-price { text-decoration: line-through; color: #555; margin-right: 10px; }
+.current-price { color: #d4af37; font-size: 1.8rem; font-weight: bold; }
+
+.btn-buy { display: block; padding: 15px; background: #1a1a1a; color: #fff; text-decoration: none; border: 1px solid #d4af37; border-radius: 6px; font-weight: bold; }
+.btn-buy:hover { background: #d4af37; color: #000; }
+
+/* MARKETING CARD (PSICOLOGÍA) */
+.marketing-card {
+    background: linear-gradient(145deg, #161616, #000);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.marketing-card h3 { color: #d4af37; font-size: 1.8rem; margin-bottom: 20px; }
+.marketing-card p { color: #aaa; line-height: 1.6; margin-bottom: 20px; }
+.marketing-list { list-style: none; color: #eee; margin-bottom: 25px; }
+.marketing-list li { margin-bottom: 12px; font-size: 0.95rem; }
+.final-call { font-weight: bold; color: #d4af37 !important; font-style: italic; }
+
+.footer-simple { padding: 50px; text-align: center; color: #444; border-top: 1px solid #222; }
+/* Portal de Suerte */
+.luck-portal {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #d4af37;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.limit-phrase {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Números 777 Llamativos */
+.jackpot-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.lucky-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #d4af37;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 2px 2px #000;
+    animation: luckyBounce 1.5s infinite alternate;
+}
+
+/* Animación individual para cada 7 */
+.lucky-number:nth-child(2) { animation-delay: 0.2s; }
+.lucky-number:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes luckyBounce {
+    from { transform: translateY(0) scale(1); opacity: 1; }
+    to { transform: translateY(-10px) scale(1.1); opacity: 0.8; }
+}
+
+.promo-timer {
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    padding-top: 15px;
+}
